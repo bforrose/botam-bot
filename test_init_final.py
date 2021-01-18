@@ -2804,7 +2804,7 @@ class mainCog(commands.Cog):
 						cur_pos[i] = random_pos[i][j]
 						str_racing_field.append("".join(racing_field[i]))
 
-					await asyncio.sleep(1) 
+					await asyncio.sleep(0.5) 
 
 					for i in range(len(racing_member)):
 						output +=  str_racing_field[i] + '\n'
