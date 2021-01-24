@@ -2782,7 +2782,7 @@ class mainCog(commands.Cog):
 				await asyncio.sleep(1)
 				await result_race.edit(content = output + ':traffic_light: 1초 후 경주가 시작됩니다!')
 				await asyncio.sleep(1)
-				await result_race.edit(content = output + ':checkered_flag:  경주 시작!')								
+				await result_race.edit(content = output + ':checkered_flag:  경주 시작!')
 
 				for i in range(len(racing_member)):
 					test = random.sample(range(2,field_size-2), race_info[i][2])
@@ -2792,7 +2792,7 @@ class mainCog(commands.Cog):
 					test.sort(reverse=True)
 					random_pos.append(test)
 
-				for j in range(len(random_pos[0])):
+				for j in range(10):
 					if j%2 == 0:
 						output =  ':camera: :camera_with_flash: :camera: 신나는 레이싱! :camera_with_flash: :camera: :camera_with_flash:\n'
 					else :
