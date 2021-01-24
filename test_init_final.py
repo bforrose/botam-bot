@@ -2742,7 +2742,7 @@ class mainCog(commands.Cog):
 			random.shuffle(racing_unit)
 
 			field_size = 60
-			tmp_race_tab = 35 - len(racing_member)
+			tmp_race_tab = 15 - len(racing_member)
 			if len(racing_member) <= 1:
 				await ctx.send('레이스 인원이 2명보다 작습니다.')
 				return
@@ -2793,7 +2793,7 @@ class mainCog(commands.Cog):
 					random_pos.append(test)
 
 				for j in range(len(random_pos[0])):
-					if j%2 == 0:
+					if j % 2 == 0:
 						output =  ':camera: :camera_with_flash: :camera: 신나는 레이싱! :camera_with_flash: :camera: :camera_with_flash:\n'
 					else :
 						output =  ':camera_with_flash: :camera: :camera_with_flash: 신나는 레이싱! :camera: :camera_with_flash: :camera:\n'
