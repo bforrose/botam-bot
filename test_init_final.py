@@ -3616,7 +3616,6 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 				try:
 					await self.get_channel(basicSetting[6]).connect(reconnect=True, timeout=5)
 					print('< 음성채널 [' + self.get_channel(basicSetting[6]).name + '] 접속완료 >')
-					await ctx.send('< 음성채널 [' + self.bot.get_channel(voice_channel.id).name + '] 접속완료>', tts=False)
 				except:
 					print('< 음성채널 [' + self.get_channel(basicSetting[6]).name + '] 접속에러 >')
 					pass			
