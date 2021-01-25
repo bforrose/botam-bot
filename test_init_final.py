@@ -4,7 +4,7 @@
 
 import sys, os
 import asyncio, discord, aiohttp
-import random, re, datetime, time, logging, requests
+import random, re, datetime, time, logging
 from discord.ext import tasks, commands
 from discord.ext.commands import CommandNotFound, MissingRequiredArgument
 from gtts import gTTS
@@ -1671,19 +1671,19 @@ class mainCog(commands.Cog):
 			print("보탐봇강제재시작!")
 			await asyncio.sleep(2)
 
-			# inidata_restart = repo_restart.get_contents("restart.txt")
-			# file_data_restart = base64.b64decode(inidata_restart.content)
-			# file_data_restart = file_data_restart.decode('utf-8')
-			# inputData_restart = file_data_restart.split('\n')
+			inidata_restart = repo_restart.get_contents("restart.txt")
+			file_data_restart = base64.b64decode(inidata_restart.content)
+			file_data_restart = file_data_restart.decode('utf-8')
+			inputData_restart = file_data_restart.split('\n')
 
-			# if len(inputData_restart) < 3:	
-			# 	contents12 = repo_restart.get_contents("restart.txt")
-			# 	repo_restart.update_file(contents12.path, "restart_0", "restart\nrestart\nrestrat\n", contents12.sha)
-			# else:
-			# 	contents12 = repo_restart.get_contents("restart.txt")
-			# 	repo_restart.update_file(contents12.path, "restart_1", "", contents12.sha)
-			headers = {'Content-Type': 'application/json', 'Accept': 'application/vnd.heroku+json; version=3', 'Authorization': 'Bearer 0b8fb4bb-5baa-4980-ac13-ec7b2a65734f'}
-			response = requests.delete('https://api.heroku.com/apps/botam-bot/dynos', headers=headers)
+			if len(inputData_restart) < 3:	
+				contents12 = repo_restart.get_contents("restart.txt")
+				repo_restart.update_file(contents12.path, "restart_0", "restart\nrestart\nrestrat\n", contents12.sha)
+			else:
+				contents12 = repo_restart.get_contents("restart.txt")
+				repo_restart.update_file(contents12.path, "restart_1", "", contents12.sha)
+			# headers = {'Content-Type': 'application/json', 'Accept': 'application/vnd.heroku+json; version=3', 'Authorization': 'Bearer 0b8fb4bb-5baa-4980-ac13-ec7b2a65734f'}
+			# response = requests.delete('https://api.heroku.com/apps/botam-bot/dynos', headers=headers)
 		else:
 			return
 
