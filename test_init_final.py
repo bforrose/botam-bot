@@ -1682,6 +1682,8 @@ class mainCog(commands.Cog):
 			# else:
 			# 	contents12 = repo_restart.get_contents("restart.txt")
 			# 	repo_restart.update_file(contents12.path, "restart_1", "", contents12.sha)
+			await ctx.send( '< 보탐봇 재시작 중입니다! 잠시만요! >', tts=False)
+
 			headers = {'Content-Type': 'application/json', 'Accept': 'application/vnd.heroku+json; version=3', 'Authorization': 'Bearer 0b8fb4bb-5baa-4980-ac13-ec7b2a65734f'}
 			response = requests.delete('https://api.heroku.com/apps/botam-bot/dynos', headers=headers)
 		else:
@@ -3614,6 +3616,7 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 				try:
 					await self.get_channel(basicSetting[6]).connect(reconnect=True, timeout=5)
 					print('< 음성채널 [' + self.get_channel(basicSetting[6]).name + '] 접속완료 >')
+					await ctx.send('< 음성채널 [' + self.bot.get_channel(voice_channel.id).name + '] 접속완료>', tts=False)
 				except:
 					print('< 음성채널 [' + self.get_channel(basicSetting[6]).name + '] 접속에러 >')
 					pass			
