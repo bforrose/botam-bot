@@ -946,6 +946,7 @@ class taskCog(commands.Cog):
 					try:
 						await self.bot.get_channel(basicSetting[6]).connect(reconnect=True, timeout=5)
 						print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} : 음성 채널 자동 재접속완료!")
+						await self.bot.get_channel(channel).send('< 음성 채널에 자동 재접속 했습니다. >')
 					except discord.errors.ClientException as e:
 						print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} : 음성 자동 접속 부분에서 서버 음성 채널 이미 접속 에러 : {e}")
 						self.checker = False
