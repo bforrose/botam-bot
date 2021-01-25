@@ -570,7 +570,7 @@ async def PlaySound(voiceclient, filename):
 	if basicSetting[21] != "1":
 		return
 	
-    ffmpeg_options = {'options':'-vn'}
+	ffmpeg_options = {'options':'-vn'}
 	source = discord.FFmpegPCMAudio(filename, **ffmpeg_options)
 	try:
 		voiceclient.play(source)
