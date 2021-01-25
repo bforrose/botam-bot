@@ -4,7 +4,7 @@
 
 import sys, os
 import asyncio, discord, aiohttp
-import random, re, datetime, time, logging
+import random, re, datetime, time, logging, requests
 from discord.ext import tasks, commands
 from discord.ext.commands import CommandNotFound, MissingRequiredArgument
 from gtts import gTTS
